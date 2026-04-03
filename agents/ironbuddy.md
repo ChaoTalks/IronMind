@@ -142,6 +142,140 @@ Message pool — rotate, never repeat two days in a row:
 
 ---
 
+## Motivational Quotes
+
+Append one quote to the following notification types:
+- **`morning`** — always
+- **`pre_window`** — always
+- **`milestone`** — always
+- **`silence`** — always
+- **`recovery_pulse` day 1 morning** — always
+
+Do NOT append quotes to evening wind-down or same-day relapse check-ins — those moments need space, not fuel.
+
+**Format:** Quote on its own line, attributed, after the main message body. One blank line between message and quote.
+
+```
+{main notification message}
+
+— "{quote}" — {name}
+```
+
+**Rotation rule:** Never repeat the same quote within a 14-day window. Track by quote index.
+
+---
+
+### Quote Bank (42 quotes)
+
+**Kobe Bryant**
+> "The most important thing is to try and inspire people so that they can be great in whatever they want to do."
+
+> "I have self-doubt. I have insecurity. I have fear of failure. I have nights when I show up and I'm like, 'My back hurts, my feet hurt, my knees hurt.' We all have self-doubt. You don't deny it, but you also don't capitulate to it."
+
+> "Everything negative — pressure, challenges — is all an opportunity for me to rise."
+
+> "Once you know what failure feels like, determination chases success."
+
+> "The moment you give up is the moment you let someone else win."
+
+**Michael Jordan**
+> "I've missed more than 9,000 shots in my career. I've lost almost 300 games. Twenty-six times I've been trusted to take the game-winning shot and missed. I've failed over and over and over again — and that is why I succeed."
+
+> "Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it."
+
+> "I can accept failure. Everyone fails at something. But I can't accept not trying."
+
+> "Some people want it to happen. Some wish it would happen. Others make it happen."
+
+**Muhammad Ali**
+> "It's not bragging if you can back it up."
+
+> "I hated every minute of training, but I said: don't quit. Suffer now and live the rest of your life as a champion."
+
+> "He who is not courageous enough to take risks will accomplish nothing in life."
+
+> "The man who has no imagination has no wings."
+
+> "Don't count the days. Make the days count."
+
+**Winston Churchill**
+> "Success is not final, failure is not fatal: it is the courage to continue that counts."
+
+> "If you're going through hell, keep going."
+
+> "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty."
+
+> "Success is stumbling from failure to failure with no loss of enthusiasm."
+
+> "We shall not flag or fail. We shall fight on the seas and oceans. We shall never surrender."
+
+**Marcus Aurelius**
+> "You have power over your mind, not outside events. Realize this, and you will find strength."
+
+> "The impediment to action advances action. What stands in the way becomes the way."
+
+> "Waste no more time arguing what a good man should be. Be one."
+
+> "The first rule is to keep an untroubled spirit. The second is to look things in the face and know them for what they are."
+
+> "It never helps to do what is not right."
+
+**David Goggins**
+> "You are in danger of living a life so comfortable and soft that you will die without ever realizing your true potential."
+
+> "The most important conversation is the one you have with yourself."
+
+> "Don't stop when you're tired. Stop when you're done."
+
+> "Suffering is the true test of life."
+
+**Jocko Willink**
+> "Discipline equals freedom."
+
+> "Good. When things go wrong and you have to confront them — that's good. You are going to learn."
+
+> "The only way through is through."
+
+> "Don't expect to be motivated every day. Be disciplined."
+
+**Bruce Lee**
+> "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+
+> "Do not pray for an easy life. Pray for the strength to endure a difficult one."
+
+> "If you spend too much time thinking about a thing, you'll never get it done."
+
+> "A goal is not always meant to be reached. It often serves simply as something to aim at."
+
+**Theodore Roosevelt**
+> "Nothing in the world is worth having or worth doing unless it means effort, pain, difficulty."
+
+> "Believe you can and you're halfway there."
+
+> "Do what you can, with what you have, where you are."
+
+**Vince Lombardi**
+> "It does not matter how many times you get knocked down, but how many times you get up."
+
+> "Winners never quit and quitters never win."
+
+> "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack of will."
+
+**Arnold Schwarzenegger**
+> "Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength."
+
+> "The mind is the limit. As long as the mind can envision the fact that you can do something, you can do it."
+
+**Sun Tzu**
+> "Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."
+
+> "Know yourself and you will win all battles."
+
+**Ernest Hemingway**
+> "The world breaks everyone, and afterward, some are strong at the broken places."
+
+---
+
 ## Decision Logic
 
 When IronBuddy wakes to send a notification, it checks in this order:
