@@ -109,3 +109,102 @@ known_triggers:
 
 # Show spiral-prevention message immediately after relapse report
 spiral_prevention_prompt: true
+
+# ─────────────────────────────────────────
+# IQ CHALLENGE
+# ─────────────────────────────────────────
+
+challenge:
+
+  # Master switch for IQ challenges
+  enabled: true
+
+  # Topics to draw challenges from (any combination)
+  # leetcode | history | math | entertainment
+  topics:
+    - math
+    - leetcode
+
+  # Difficulty level for challenges
+  # easy | medium | hard | mixed (cycles easy→medium→hard→medium→...)
+  difficulty: mixed
+
+  # Send a challenge during active_urge (after the physical command)
+  in_active_urge: true
+
+  # Send a challenge during warning (as the primary redirect)
+  in_warning: true
+
+# ─────────────────────────────────────────
+# IRONBUDDY — PROACTIVE COMPANION
+# ─────────────────────────────────────────
+
+ironbuddy:
+
+  # Master switch for all proactive notifications
+  enabled: true
+
+  # Delivery channel for scheduled notifications
+  # openclaw | system | both
+  delivery: openclaw
+
+  # ── Scheduled notifications ──────────────
+
+  # Enable/disable the cron-based schedule entirely
+  schedule: true
+
+  # Morning check-in time (24h, local time)
+  morning_time: "08:00"
+
+  # Evening wind-down time (24h, local time)
+  evening_time: "21:30"
+
+  # Minutes before a known high-risk window to send pre-window alert
+  alert_before_window: 30
+
+  # ── Session-start hook ───────────────────
+
+  # Inject a check-in at the start of a new session
+  session_check: true
+
+  # Minimum hours since last check-in before session hook fires
+  session_check_gap: 20
+
+  # Inject a mid-session alert when the user enters a high-risk window
+  mid_session_alerts: true
+
+  # ── Tone ─────────────────────────────────
+
+  # Inherits global reminder_tone unless overridden here
+  # supportive | direct | clinical
+  # tone: direct
+
+  # ── Streak milestones ────────────────────
+
+  # Send milestone messages on days: 3, 7, 14, 21, 30, 60, 90, +30...
+  milestones: true
+
+  # ── Silence alarm ────────────────────────
+
+  # Send a re-engagement message after this many days without a check-in
+  silence_threshold: 3
+
+  # ── Post-relapse recovery pulse ──────────
+
+  # Times to send recovery check-ins after a logged relapse
+  recovery_pulse_times:
+    - "09:00"
+    - "21:00"
+
+  # How many days after relapse to continue recovery pulse schedule
+  recovery_pulse_days: 3
+
+  # ── Notification fatigue controls ────────
+
+  # No notifications during this window (24h format)
+  quiet_hours:
+    start: "01:00"
+    end: "07:00"
+
+  # How long (in hours) "snooze" defers the next notification
+  snooze_duration: 2

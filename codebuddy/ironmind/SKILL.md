@@ -1,6 +1,6 @@
 ---
-name: urge-interrupt
-description: "Behavioral intervention for compulsive pornography and masturbation habits. Action-first, low-shame, no moralizing. Triggers on: '/urge-interrupt', '/ui', 'urge interrupt', active urge reports, relapse reports, trigger analysis requests."
+name: ironmind
+description: "Behavioral intervention for compulsive pornography and masturbation habits. Action-first, low-shame, no moralizing. Triggers on: '/ironmind', '/im', 'ironmind', active urge reports, relapse reports, trigger analysis requests."
 license: MIT
 ---
 

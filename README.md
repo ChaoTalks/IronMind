@@ -10,11 +10,78 @@
 
 Behavioral intervention skill for reducing or stopping compulsive pornography consumption and masturbation.
 
-**If you work from home alone, this is the skill you need most.** No office. No colleagues. No external accountability. Just you, your screen, and no one checking. IronMind is built for exactly that situation.
+**If you work from home alone, this is the skill you need most.** No office. No colleagues. No external accountability. Just you, your screen, and no one checking. Most habit tools wait for you to show up. IronMind doesn't — it comes to you.
 
 **Action-first. Low-shame. No moralizing.**
 
 Works with: Claude Code · Cursor · VS Code / GitHub Copilot · CodeBuddy · Codex CLI
+
+---
+
+## IronBuddy — Your Proactive Companion
+
+IronMind has two sides:
+
+- **The skill** — responds when you call `/ironmind`. State-aware, intervention-ready.
+- **IronBuddy** — the proactive side. Reaches out on a schedule. Doesn't wait to be asked.
+
+IronBuddy stays with you throughout the day:
+
+| When | What IronBuddy does |
+|---|---|
+| Morning | Sends a daily check-in before your workday starts |
+| Before your risk window | Flags the window 30 min early, prompts a plan |
+| Evening | Closes the day with a short state check |
+| Session start | Injects a quiet check-in when you open a new AI session |
+| Day 3, 7, 14, 30... | Acknowledges streak milestones without overdoing it |
+| After 3 days of silence | Gently re-engages, no guilt |
+| Post-relapse | Sends recovery pulses for 3 days to prevent the spiral |
+
+IronBuddy's messages are short — one to three lines. It does not nag. When you respond, the IronMind skill takes over with the right protocol for your state.
+
+---
+
+## IQ Challenge — Cognitive Interrupt
+
+Urges peak at 3–7 minutes and then naturally subside. IronMind exploits this window with a real cognitive challenge that forces prefrontal engagement and crowds out the limbic pull.
+
+**In `active_urge`:** Physical command first — then immediately a challenge to land on.
+**In `warning`:** Challenge is the primary redirect. Drift hasn't built momentum yet; focused thinking is enough.
+
+Configure your preferred topics in `config.yaml`:
+
+| Topic | Example |
+|---|---|
+| `leetcode` | "Array `[2,7,11,15]`, target `9` — which indices sum to the target?" |
+| `history` | "Put these events in order: French Revolution, printing press, fall of the Berlin Wall." |
+| `math` | "A train at 80 km/h covers 220 km. How long? Answer in hours and minutes." |
+| `entertainment` | "Name three films directed by Christopher Nolan." |
+
+Difficulty cycles through easy → medium → hard → medium by default, or set a fixed level. The skill tracks which topic was last used and rotates so you never see the same category twice in a row.
+
+---
+
+## Post-Relapse — Quotes from People Who Failed and Won
+
+When a relapse happens, IronMind doesn't just acknowledge and move on. After stabilizing, it shares a quote from a historical figure who failed — repeatedly, seriously — and still built something remarkable.
+
+The figure is matched to your emotional state:
+
+| How you're feeling | Who shows up |
+|---|---|
+| Shame, self-attack | Edison, Dyson — failure is data, not identity |
+| "I always do this" | Jordan, Kobe — repetition is how you get good, not proof you can't |
+| Hopeless, "what's the point" | Mandela, Churchill — the long arc, persistence as the only variable |
+| Lowest point | Lincoln, Rowling — built on the bottom |
+| Analytical, want to understand | Marcus Aurelius, Ford — systems and recovery |
+
+Then, once the quote lands, IronBuddy asks one question: **what time did this happen?** That time becomes your protected window — and IronBuddy will be there 30 minutes before it opens, every day, so you're never walking into your most dangerous hour alone.
+
+> Edison ran 10,000 failed experiments before the lightbulb — and logged every one as data.
+> *"I have not failed. I've just found 10,000 ways that won't work."*
+> You have one data point tonight. That's information, not a verdict.
+>
+> One more thing: what time did this happen? Tell me and I'll set IronBuddy to check in with you during that window — so next time you won't be in it alone.
 
 ---
 
@@ -58,38 +125,38 @@ When state is ambiguous between `warning` and `active_urge`, the skill defaults 
 ### Claude Code
 
 ```bash
-git clone https://github.com/your-org/IronMind ~/.claude/skills/urge-interrupt
+git clone https://github.com/your-org/IronMind ~/.claude/skills/ironmind
 ```
 
-Invoke with `/urge-interrupt` or `/ui`.
+Invoke with `/ironmind` `/im`.
 
 ### Cursor
 
-Copy `cursor/rules/urge-interrupt.mdc` to your project's `.cursor/rules/` directory.
+Copy `cursor/rules/ironmind.mdc` to your project's `.cursor/rules/` directory.
 
 ### VS Code / GitHub Copilot
 
-Copy `vscode/instructions/urge-interrupt.instructions.md` to your project's `.github/instructions/` directory.
+Copy `vscode/instructions/ironmind.instructions.md` to your project's `.github/instructions/` directory.
 
 ### CodeBuddy
 
-Copy `codebuddy/urge-interrupt/SKILL.md` into your CodeBuddy skills directory.
+Copy `codebuddy/ironmind/SKILL.md` into your CodeBuddy skills directory.
 
 ### Codex CLI
 
-Copy `codex/urge-interrupt/SKILL.md` into your Codex skills directory.
+Copy `codex/ironmind/SKILL.md` into your Codex skills directory.
 
 ---
 
 ## Usage
 
 ```
-/urge-interrupt              # open check-in, state inferred from message
-/urge-interrupt active       # jump to active_urge protocol
-/urge-interrupt relapse      # jump to post_relapse protocol
-/urge-interrupt review       # trigger map or weekly review
-/urge-interrupt morning      # morning reminder
-/urge-interrupt evening      # evening pre-window check
+/ironmind              # open check-in, state inferred from message
+/ironmind active       # jump to active_urge protocol
+/ironmind relapse      # jump to post_relapse protocol
+/ironmind review       # trigger map or weekly review
+/ironmind morning      # morning reminder
+/ironmind evening      # evening pre-window check
 ```
 
 ---
@@ -211,23 +278,31 @@ Agent:
 ```
 IronMind/
 ├── skills/
-│   └── urge-interrupt/
+│   └── ironmind/
 │       ├── SKILL.md                        # Canonical skill definition
 │       └── references/
 │           ├── trigger-map.md              # 3-tier trigger analysis framework
 │           ├── reminder-templates.md       # Morning / evening / weekly templates
-│           └── replacement-behaviors.md    # Full replacement behavior menu
+│           ├── replacement-behaviors.md    # Full replacement behavior menu
+│           ├── proactive-mode.md           # IronBuddy ↔ skill handoff protocol
+│           ├── iq-challenge.md             # Challenge bank and delivery logic
+│           └── relapse-quotes.md           # Quote bank, selection logic, notification prompt
+├── agents/
+│   └── ironbuddy.md                        # Proactive companion agent definition
+├── hooks/
+│   ├── session-check.md                    # SessionStart hook
+│   └── schedule.md                         # Cron-based notification schedule
 ├── cursor/
 │   └── rules/
-│       └── urge-interrupt.mdc              # Cursor IDE rule
+│       └── ironmind.mdc                    # Cursor IDE rule
 ├── vscode/
 │   └── instructions/
-│       └── urge-interrupt.instructions.md  # VS Code / GitHub Copilot
+│       └── ironmind.instructions.md        # VS Code / GitHub Copilot
 ├── codebuddy/
-│   └── urge-interrupt/
+│   └── ironmind/
 │       └── SKILL.md                        # CodeBuddy adaptation
 ├── codex/
-│   └── urge-interrupt/
+│   └── ironmind/
 │       └── SKILL.md                        # Codex CLI adaptation
 ├── plugin.json                             # Plugin manifest
 ├── config.example.yaml                     # Configuration template
@@ -267,10 +342,12 @@ The goal is not perfection. It is a longer average gap between events, faster re
 Contributions welcome. Priorities:
 
 - Additional language translations
+- More IQ challenge questions across all four topics
+- More IronBuddy message variants (reduce repetition)
 - More replacement behavior options
 - Improved trigger pattern card formatting
 - Post-session reflection templates
-- Integration with calendar/reminder APIs
+- Additional delivery channels for IronBuddy notifications
 
 Keep all additions consistent with the design principles: low shame, action-first, no preaching.
 

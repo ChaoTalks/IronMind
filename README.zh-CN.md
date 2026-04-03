@@ -10,11 +10,78 @@
 
 帮助你减少或彻底停止强迫性看色情内容和手淫习惯的行为干预 Skill。
 
-**如果你一个人在家办公，这是你最需要的 Skill。** 没有同事，没有办公室，没有人监督，只有你和你的屏幕。这种环境是最难抵抗冲动的——IronMind 就是为这种处境而生的。
+**如果你一个人在家办公，这是你最需要的 Skill。** 没有同事，没有办公室，没有人监督，只有你和你的屏幕。大多数习惯工具等着你主动来找它——IronMind 不是，它会主动找你。
 
 **行动优先。低羞耻感。不说教。**
 
 支持平台：Claude Code · Cursor · VS Code / GitHub Copilot · CodeBuddy · Codex CLI
+
+---
+
+## IronBuddy — 你的主动陪伴伙伴
+
+IronMind 有两面：
+
+- **Skill 本体** — 你呼叫 `/ironmind` 时响应。感知状态，随时干预。
+- **IronBuddy** — 主动的那一面。按计划主动联系你，不等你开口。
+
+IronBuddy 全天陪着你：
+
+| 时间 | IronBuddy 做什么 |
+|---|---|
+| 早晨 | 在你开始工作前发送每日签到 |
+| 高风险窗口前 30 分钟 | 提前预警，问你今晚的计划 |
+| 傍晚 | 用一两句话收尾当天 |
+| 打开新会话时 | 静默注入一条签到，不打扰你的工作 |
+| 第 3、7、14、30 天… | 不夸张地确认打卡里程碑 |
+| 沉默超过 3 天 | 轻声重新联系，没有内疚感 |
+| 复发后 | 连续 3 天发送恢复脉冲，防止螺旋 |
+
+IronBuddy 的消息很短——最多三句话。它不唠叨。你一回应，IronMind Skill 就接管，用对应你状态的协议继续。
+
+---
+
+## IQ 挑战——认知中断
+
+冲动在 3–7 分钟内达到峰值，然后自然消退。IronMind 利用这个窗口期，用一道真正需要动脑的挑战题强制启动前额叶皮质，将边缘系统的拉力排挤出去。
+
+**激活冲动状态：** 先给一个身体指令——然后立即跟上一道挑战题，给大脑一个着落点。
+**预警状态：** 挑战题直接作为主要重定向。漂移还没形成动力，专注思考就够了。
+
+在 `config.yaml` 中配置你偏好的题目类型：
+
+| 类型 | 示例 |
+|---|---|
+| `leetcode` | "数组 `[2,7,11,15]`，目标值 `9`——哪两个下标的值相加等于目标？" |
+| `history` | "按时间顺序排列：法国大革命、印刷术发明、柏林墙倒塌。" |
+| `math` | "火车以 80 km/h 行驶 220 km，需要多长时间？用小时和分钟回答。" |
+| `entertainment` | "说出三部克里斯托弗·诺兰执导的电影。" |
+
+难度默认按 简单→中等→难→中等 循环，也可以固定某个级别。Skill 会追踪上次使用的题目类型并轮换，确保连续两次不会出同一类型。
+
+---
+
+## 复发后——来自失败过又赢了的人的话
+
+复发发生时，IronMind 不只是确认一下然后过去。在让你稳住之后，它会分享一位历史上曾经反复失败、却仍然建造出了非凡成就的人物的话。
+
+人物会根据你当时的情绪状态来匹配：
+
+| 你的感受 | 出场人物 |
+|---|---|
+| 羞耻、自我攻击 | 爱迪生、戴森——失败是数据，不是身份 |
+| "我总是这样" | 乔丹、科比——重复是你变强的方式，不是证明你不行 |
+| 绝望、"有什么意义" | 曼德拉、丘吉尔——漫长弧线，坚持是唯一变量 |
+| 到了最低点 | 林肯、罗琳——在最底层建起来的 |
+| 理性、想弄清楚规律 | 马可·奥勒留、福特——系统与恢复 |
+
+然后，当这句话落地之后，IronBuddy 问你一个问题：**这发生在几点？** 那个时间就成为你被保护的窗口——IronBuddy 会在它打开前 30 分钟出现，每一天，让你永远不要在最危险的时段独自面对。
+
+> 爱迪生做了一万次失败的实验才发明了灯泡，他把每一次都记录为数据。
+> *"我没有失败。我只是找到了一万种行不通的方法。"*
+> 今晚只是一个数据点。那是信息，不是判决。
+>
+> 还有一件事：这发生在几点？告诉我，我来设置 IronBuddy 在那个时段陪着你——下次你不会一个人进去。
 
 ---
 
@@ -58,38 +125,38 @@ Skill 不解释这个行为为什么有害，也不输出任何价值观。你�
 ### Claude Code
 
 ```bash
-git clone https://github.com/your-org/IronMind ~/.claude/skills/urge-interrupt
+git clone https://github.com/your-org/IronMind ~/.claude/skills/ironmind
 ```
 
-使用 `/urge-interrupt` 或 `/ui` 唤起。
+使用 `/ironmind` 或 `/im` 唤起。
 
 ### Cursor
 
-将 `cursor/rules/urge-interrupt.mdc` 复制到你项目的 `.cursor/rules/` 目录。
+将 `cursor/rules/ironmind.mdc` 复制到你项目的 `.cursor/rules/` 目录。
 
 ### VS Code / GitHub Copilot
 
-将 `vscode/instructions/urge-interrupt.instructions.md` 复制到 `.github/instructions/` 目录。
+将 `vscode/instructions/ironmind.instructions.md` 复制到 `.github/instructions/` 目录。
 
 ### CodeBuddy
 
-将 `codebuddy/urge-interrupt/SKILL.md` 复制到你的 CodeBuddy skills 目录。
+将 `codebuddy/ironmind/SKILL.md` 复制到你的 CodeBuddy skills 目录。
 
 ### Codex CLI
 
-将 `codex/urge-interrupt/SKILL.md` 复制到你的 Codex skills 目录。
+将 `codex/ironmind/SKILL.md` 复制到你的 Codex skills 目录。
 
 ---
 
 ## 使用方式
 
 ```
-/urge-interrupt              # 开放签到，根据消息内容自动判断状态
-/urge-interrupt active       # 直接进入激活冲动协议
-/urge-interrupt relapse      # 直接进入复发后协议
-/urge-interrupt review       # 触发点分析或每周回顾
-/urge-interrupt morning      # 早晨提醒
-/urge-interrupt evening      # 傍晚高风险窗口前检查
+/ironmind              # 开放签到，根据消息内容自动判断状态
+/ironmind active       # 直接进入激活冲动协议
+/ironmind relapse      # 直接进入复发后协议
+/ironmind review       # 触发点分析或每周回顾
+/ironmind morning      # 早晨提醒
+/ironmind evening      # 傍晚高风险窗口前检查
 ```
 
 ---
@@ -209,23 +276,31 @@ Skill：
 ```
 IronMind/
 ├── skills/
-│   └── urge-interrupt/
+│   └── ironmind/
 │       ├── SKILL.md                        # 权威 Skill 定义
 │       └── references/
 │           ├── trigger-map.md              # 三层触发点分析框架
 │           ├── reminder-templates.md       # 早晨/傍晚/每周提醒模板
-│           └── replacement-behaviors.md    # 完整替代行为菜单
+│           ├── replacement-behaviors.md    # 完整替代行为菜单
+│           ├── proactive-mode.md           # IronBuddy ↔ Skill 交接协议
+│           ├── iq-challenge.md             # 挑战题库与投递逻辑
+│           └── relapse-quotes.md           # 名言库、人物匹配逻辑、通知设置提示
+├── agents/
+│   └── ironbuddy.md                        # 主动陪伴 Agent 定义
+├── hooks/
+│   ├── session-check.md                    # 会话启动 Hook
+│   └── schedule.md                         # 定时通知调度
 ├── cursor/
 │   └── rules/
-│       └── urge-interrupt.mdc              # Cursor IDE 规则
+│       └── ironmind.mdc                    # Cursor IDE 规则
 ├── vscode/
 │   └── instructions/
-│       └── urge-interrupt.instructions.md  # VS Code / GitHub Copilot
+│       └── ironmind.instructions.md        # VS Code / GitHub Copilot
 ├── codebuddy/
-│   └── urge-interrupt/
+│   └── ironmind/
 │       └── SKILL.md                        # CodeBuddy 适配
 ├── codex/
-│   └── urge-interrupt/
+│   └── ironmind/
 │       └── SKILL.md                        # Codex CLI 适配
 ├── plugin.json                             # 插件清单
 ├── config.example.yaml                     # 配置模板
@@ -265,10 +340,12 @@ IronMind 围绕这两个失效模式构建：复发后零戏剧性，窗口打�
 欢迎提 PR。优先方向：
 
 - 更多语言翻译
+- 更多 IQ 挑战题目（四个类型均可）
+- 更多 IronBuddy 消息变体（减少重复感）
 - 更多替代行为选项
 - 触发点模式卡片的格式优化
 - 事后反思模板
-- 与日历/提醒 API 的集成
+- IronBuddy 更多通知渠道支持
 
 所有新增内容请保持与设计原则一致：低羞耻感，行动优先，不说教。
 
