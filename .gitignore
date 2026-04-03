@@ -1,0 +1,15 @@
+# Configuration (may contain personal trigger data)
+config.yaml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo

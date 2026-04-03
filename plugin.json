@@ -1,0 +1,44 @@
+{
+  "name": "urge-interrupt",
+  "version": "1.0.0",
+  "description": "Behavioral intervention skill for reducing compulsive pornography consumption and masturbation. Action-first, low-shame, no moralizing.",
+  "homepage": "https://github.com/your-org/IronMind",
+  "license": "MIT",
+  "skills": [
+    {
+      "name": "urge-interrupt",
+      "path": "skills/urge-interrupt/SKILL.md",
+      "aliases": ["ui"],
+      "triggers": [
+        "/urge-interrupt",
+        "/ui",
+        "urge interrupt",
+        "I need help right now",
+        "I gave in",
+        "I relapsed",
+        "active urge",
+        "post relapse",
+        "trigger map",
+        "day check-in"
+      ]
+    }
+  ],
+  "platforms": {
+    "claude": {
+      "skill": "skills/urge-interrupt/SKILL.md",
+      "references": "skills/urge-interrupt/references/"
+    },
+    "cursor": {
+      "rule": "cursor/rules/urge-interrupt.mdc"
+    },
+    "vscode": {
+      "instruction": "vscode/instructions/urge-interrupt.instructions.md"
+    },
+    "codebuddy": {
+      "skill": "codebuddy/urge-interrupt/SKILL.md"
+    },
+    "codex": {
+      "skill": "codex/urge-interrupt/SKILL.md"
+    }
+  }
+}
