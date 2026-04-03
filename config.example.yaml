@@ -1,0 +1,148 @@
+# Urge Interrupt — Configuration Example
+# Copy this file to config.yaml and adjust to your preferences.
+# All fields are optional. Defaults are shown below.
+
+# ─────────────────────────────────────────
+# USER GOAL
+# ─────────────────────────────────────────
+
+# What the user is working toward.
+# "reduction" = cutting back, building a healthier relationship
+# "cessation" = stopping completely
+goal_type: cessation
+
+# Optional: start date for streak tracking (ISO 8601)
+# streak_start: "2025-01-15"
+
+# ─────────────────────────────────────────
+# LANGUAGE
+# ─────────────────────────────────────────
+
+# Language code for responses.
+# Supported: en (English), zh (Chinese), es (Spanish), fr (French), de (German)
+# Default: en
+language: en
+
+# ─────────────────────────────────────────
+# REMINDER SETTINGS
+# ─────────────────────────────────────────
+
+# When to send daily reminders.
+# Options: morning | evening | both | off
+reminder_schedule: both
+
+# Time for morning check-in (24h format, local time)
+reminder_morning_time: "08:00"
+
+# Time for evening check-in (24h format, local time)
+reminder_evening_time: "21:00"
+
+# Tone of reminder messages.
+# "supportive" — warmer language, slightly more encouraging phrasing
+# "direct"     — short, no-frills, action-focused (default)
+# "clinical"   — neutral, behavioral, minimal emotional framing
+reminder_tone: direct
+
+# ─────────────────────────────────────────
+# INTERVENTION INTENSITY
+# ─────────────────────────────────────────
+
+# How forceful the active_urge response is.
+# "low"    — one suggestion, gentle nudge
+# "medium" — firm command + follow-up (default)
+# "high"   — repeated commands, escalating if no response
+intervention_intensity: medium
+
+# ─────────────────────────────────────────
+# DEFAULT INTERRUPTION ACTIONS
+# ─────────────────────────────────────────
+
+# Ordered list of preferred replacement behaviors surfaced during active_urge
+# and warning states. The agent will suggest from this list.
+# Available options: pushups | cold_water | walk | breathe | move_room |
+#                    go_public | write_one_sentence | text_someone |
+#                    call_someone | read_book | watch_something | play_game
+default_interruption_actions:
+  - cold_water
+  - pushups
+  - move_room
+  - walk
+  - breathe
+
+# ─────────────────────────────────────────
+# STREAK TRACKING
+# ─────────────────────────────────────────
+
+# Whether to track and surface streak counts.
+# true | false
+streak_tracking: true
+
+# Whether to log relapse events with timestamp and optional note.
+# true | false
+relapse_logging: true
+
+# ─────────────────────────────────────────
+# TRIGGER MAPPING
+# ─────────────────────────────────────────
+
+# Whether to enable trigger analysis and pattern mapping.
+# true | false
+trigger_map_enabled: true
+
+# How long to wait after a relapse before offering a trigger debrief.
+# "immediate" — offer debrief right after stabilization
+# "1h"        — wait one hour before prompting
+# "24h"       — wait until the next day (default)
+# "never"     — only debrief when user initiates
+relapse_debrief_delay: "24h"
+
+# ─────────────────────────────────────────
+# KNOWN TRIGGERS (USER-DEFINED)
+# ─────────────────────────────────────────
+
+# Optional list of known high-risk times, situations, or emotional states.
+# The agent uses these to personalize warnings and check-ins.
+known_triggers:
+  times:
+    - "22:00-01:00"      # Late night window
+  situations:
+    - alone_at_home
+    - phone_in_bed
+    - extended_scrolling
+  emotional_states:
+    - bored
+    - stressed
+    - lonely
+    - anxious
+  apps_or_sites:        # Apps or site categories to watch for
+    - social_media_late_night
+    - idle_browsing
+
+# ─────────────────────────────────────────
+# POST-RELAPSE BEHAVIOR
+# ─────────────────────────────────────────
+
+# Whether to immediately offer the spiral-prevention message after relapse.
+# true | false
+spiral_prevention_prompt: true
+
+# Whether to reset streak counter automatically after a logged relapse.
+# "auto"   — reset automatically
+# "manual" — user must confirm before streak resets
+streak_reset_mode: manual
+
+# ─────────────────────────────────────────
+# ADVANCED
+# ─────────────────────────────────────────
+
+# Maximum response length during active_urge state (in words).
+# Keep this low — long responses are counterproductive under pressure.
+active_urge_max_words: 40
+
+# Whether to require confirmation before logging a relapse.
+# Prevents accidental logging.
+relapse_log_confirm: true
+
+# Whether the agent should surface the trigger pattern card automatically
+# after completing a trigger map session.
+auto_generate_trigger_card: true
