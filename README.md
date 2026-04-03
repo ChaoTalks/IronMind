@@ -1,4 +1,4 @@
-# IronMind
+# IronMind · 刚守
 
 <p align="center">
   <img src="assets/ironmind.png" alt="IronMind" width="180" />
